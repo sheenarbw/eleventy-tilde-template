@@ -13,8 +13,7 @@ Built with Eleventy https://www.11ty.dev/
 # TODO
 
 ## Sheena
-
-- navigation setup, allow table of contents creation
+- create table of contents
 - frontmatter config/linting.
 
 ## Sheena / Katie 
