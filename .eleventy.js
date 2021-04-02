@@ -64,6 +64,9 @@ module.exports = function(eleventyConfig) {
         console.log('xxxxxxxxxxxxxxxxxxxx')
         console.log(id)
         return `<div><div id="${id}"></div>
+                <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+                <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+                <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
                 <script type="text/javascript">
                         const spec${id}=${content.trim()};
                         vegaEmbed('#${id}', spec${id});
