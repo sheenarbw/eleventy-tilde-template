@@ -1,6 +1,11 @@
 ---
 title: Missing Title
 
+date: "2016-01-01T06:00-06:00"
+value: "/{{ page.date | date: '%Y/%m/%d' }}/index.html"
+
+mySlug: this-is-a-new-path
+value2: "/{{ page.filePathStem | removeLastPathElement }}/"
 ---
 
 <!doctype html>
@@ -8,9 +13,7 @@ title: Missing Title
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title }}</title>
-
-    
+    <title>{{ title }} | COURSE </title>
   </head>
   <body>
     <h1>{{title}}</h1>

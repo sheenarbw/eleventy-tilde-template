@@ -1,15 +1,9 @@
 ---
 title: "Compound interest"
-permalink: "content/compound-interest/"
-
-date: "2016-01-01T06:00-06:00"
-value: "/{{ page.date | date: '%Y/%m/%d' }}/index.html"
-
-mySlug: this-is-a-new-path
-value2: "subdir/{{ mySlug }}/index.html"
 ---
 
-Value prints: {{ value }} <br/>
+
+permalink prints: {{ permalink }} <br/>
 But we expect: {{ page.date | date: '%Y/%m/%d' }}/index.html <br/>
 
 

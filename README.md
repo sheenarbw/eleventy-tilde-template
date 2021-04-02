@@ -15,7 +15,6 @@ Built with Eleventy https://www.11ty.dev/
 ## Sheena
 
 - navigation setup, allow table of contents creation
-- embedding flow charts? Mermaid?
 - frontmatter config/linting.
 
 ## Sheena / Katie 
