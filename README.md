@@ -15,8 +15,6 @@ Built with Eleventy https://www.11ty.dev/
 ## Sheena
 
 - navigation setup, allow table of contents creation
-- embedding youtube videos
-- embedding graphs: vega lite (demo in compound interest topic)
 - embedding flow charts? Mermaid?
 - frontmatter config/linting.
 

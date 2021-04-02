@@ -42,6 +42,7 @@ module.exports = function(eleventyConfig) {
 
     eleventyConfig.addShortcode("image", imageShortcode);
     eleventyConfig.addShortcode("youtube", function(code){
+        // https://developers.google.com/youtube/player_parameters
         return `<iframe 
                     id="ytplayer" 
                     type="text/html" 
@@ -51,6 +52,19 @@ module.exports = function(eleventyConfig) {
                     frameborder="0"
                     ></iframe>`
     });
+
+
+    eleventyConfig.addPairedShortcode("vega",function(content){
+        const { v4: uuidv4 } = require('uuid');
+
+        const id = uuidv4();
+        return `<div><div id="${id}"></div>
+                <script type="text/javascript">
+                        const spec=${content.trim()};
+                        vegaEmbed('#${id}', spec);
+                </script></div>`
+        
+    })
 
 
   };
