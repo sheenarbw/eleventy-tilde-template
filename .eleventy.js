@@ -20,6 +20,8 @@ async function imageShortcode(src, alt, sizes) {
     return Image.generateHTML(metadata, imageAttributes);
   }
 
+
+
 module.exports = function(eleventyConfig) {
     // Enabled by default
     eleventyConfig.setDynamicPermalinks(false);
@@ -39,6 +41,16 @@ module.exports = function(eleventyConfig) {
 
 
     eleventyConfig.addShortcode("image", imageShortcode);
+    eleventyConfig.addShortcode("youtube", function(code){
+        return `<iframe 
+                    id="ytplayer" 
+                    type="text/html" 
+                    width="640" 
+                    height="360"
+                    src="https://www.youtube.com/embed/${code}" 
+                    frameborder="0"
+                    ></iframe>`
+    });
 
 
   };
