@@ -61,8 +61,6 @@ module.exports = function(eleventyConfig) {
 
     eleventyConfig.addPairedShortcode("vega",function(content){
         const id = `vega${nextNumber()}`;
-        console.log('xxxxxxxxxxxxxxxxxxxx')
-        console.log(id)
         return `<div><div id="${id}"></div>
                 <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
                 <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
@@ -74,5 +72,9 @@ module.exports = function(eleventyConfig) {
         
     })
 
-
+    eleventyConfig.addPairedShortcode("mermaid",function(content){
+        return `<div class="mermaid">${content}</div>
+        <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({startOnLoad:true});</script>`
+    })
   };
