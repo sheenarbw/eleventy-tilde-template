@@ -20,7 +20,12 @@ async function imageShortcode(src, alt, sizes) {
     return Image.generateHTML(metadata, imageAttributes);
   }
 
-
+let _nextNumber=0;
+const nextNumber = () => {
+    _nextNumber ++;
+    
+    return _nextNumber;
+}
 
 module.exports = function(eleventyConfig) {
     // Enabled by default
@@ -55,13 +60,13 @@ module.exports = function(eleventyConfig) {
 
 
     eleventyConfig.addPairedShortcode("vega",function(content){
-        const { v4: uuidv4 } = require('uuid');
-
-        const id = uuidv4();
+        const id = `vega${nextNumber()}`;
+        console.log('xxxxxxxxxxxxxxxxxxxx')
+        console.log(id)
         return `<div><div id="${id}"></div>
                 <script type="text/javascript">
-                        const spec=${content.trim()};
-                        vegaEmbed('#${id}', spec);
+                        const spec${id}=${content.trim()};
+                        vegaEmbed('#${id}', spec${id});
                 </script></div>`
         
     })
