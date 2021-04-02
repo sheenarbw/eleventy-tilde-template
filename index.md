@@ -1,5 +1,8 @@
 ---
-title: Financial literacy 101
+title: Eleventy Tilde Starter
+eleventyNavigation: 
+    key: "/"
 ---
 
-{% contentLink  collections "/content/compound-interest/" %}
+
+This starter has a few things built in. All features are demod on seperate pages.

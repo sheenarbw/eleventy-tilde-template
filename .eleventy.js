@@ -1,4 +1,5 @@
 const Image = require("@11ty/eleventy-img");
+const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 
 async function imageShortcode(src, alt, sizes) {
     // see https://www.11ty.dev/docs/plugins/image/
@@ -27,12 +28,13 @@ const nextNumber = () => {
 }
 
 module.exports = function(eleventyConfig) {
+    eleventyConfig.setTemplateFormats(["md","css","njk"])
     // Enabled by default
     eleventyConfig.setDynamicPermalinks(false);
 
-    // eleventyConfig.addFilter("removeLastPathElement", function(value) { 
-    //     return path.dirname(value)
-    // });
+    eleventyConfig.addFilter("JSONstringify",function (value){
+        return `<pre>${JSON.stringify(value,null,2)}</pre>`
+    })
 
     eleventyConfig.addShortcode("contentLink", function(collections,link) {
         const filtered = collections.all.filter((value)=>value.data.permalink === link)
@@ -42,7 +44,6 @@ module.exports = function(eleventyConfig) {
         return `[${page.data.title}](${page.url})`
 
     });
-
 
     eleventyConfig.addShortcode("image", imageShortcode);
     eleventyConfig.addShortcode("youtube", function(code){
@@ -77,4 +78,7 @@ module.exports = function(eleventyConfig) {
         <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
         <script>mermaid.initialize({startOnLoad:true});</script>`
     })
+
+    eleventyConfig.addPlugin(eleventyNavigationPlugin);
+
   };
