@@ -5,4 +5,4 @@ eleventyNavigation:
 ---
 
 
-This starter has a few things built in. All features are demod on seperate pages.
+This starter has a few things built in. All features are demod on seperate pages. Just navigate around using the table of contents to see all feature demos
