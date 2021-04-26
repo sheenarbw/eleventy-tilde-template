@@ -1,5 +1,8 @@
 ---
-title: Financial Lit Syllabus
+title: Financial Lit Syllabus Outline - Start Here
+eleventyNavigation: 
+    title: "Financial Lit Syllabus"
+
 ---
 
 This is how you make links:

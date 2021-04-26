@@ -27,6 +27,12 @@ const nextNumber = () => {
     return _nextNumber;
 }
 
+
+// function navigationToTableOfContents(value){
+//   console.log(value)
+//   return `<pre>${JSON.stringify(value,null,2)}</pre>`
+// }
+
 module.exports = function(eleventyConfig) {
     eleventyConfig.setTemplateFormats(["md","css","njk"])
     // Enabled by default
@@ -35,6 +41,8 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addFilter("JSONstringify",function (value){
         return `<pre>${JSON.stringify(value,null,2)}</pre>`
     })
+
+    // eleventyConfig.addFilter("navigationToTableOfContents", navigationToTableOfContents )
 
     eleventyConfig.addShortcode("contentLink", function(collections,link) {
         if (! link.endsWith('/')) link = link+'/'

@@ -2,6 +2,7 @@
 title: Eleventy Tilde Starter
 eleventyNavigation: 
     key: "/"
+    title: "Home"
 ---
 
 
