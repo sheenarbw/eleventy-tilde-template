@@ -37,6 +37,8 @@ module.exports = function(eleventyConfig) {
     })
 
     eleventyConfig.addShortcode("contentLink", function(collections,link) {
+        if (! link.endsWith('/')) link = link+'/'
+        if (! link.startsWith('/')) link = '/'+link
         const filtered = collections.all.filter((value)=>value.data.permalink === link)
         if (filtered.length !== 1) return `No content matches permalink: "${link}"`
 

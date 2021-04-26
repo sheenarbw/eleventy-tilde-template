@@ -4,7 +4,7 @@ title: Financial Lit Syllabus
 
 This is how you make links:
 
-{% contentLink collections "/content/common-financial-goals/buying-a-house/" %}
+{% contentLink collections "content/common-financial-goals/buying-a-house" %}
 
 
 One thing to note: Most online learning solutions resemble clever textbooks. What Tilde allows is something more like a knowld\edge graph.
