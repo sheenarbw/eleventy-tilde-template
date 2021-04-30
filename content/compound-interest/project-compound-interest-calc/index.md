@@ -1,10 +1,10 @@
 ---
 title: "Compound interest project: fun with spreadsheets"
 content_type: project
+submission_type: link
 prerequisites:
   hard:
     - content/compound-interest/basics
-submission_type: link
 ---
 
 Use google spreadsheets to play with some numbers. Maybe give people the spreadsheet and then let them plug in numbers and play
