@@ -11,6 +11,10 @@ const fm = require("front-matter");
 const { exit } = require("process");
 const { NONE, COURSE, PROJECT, TOPIC } = require("./constants");
 
+const checkIdNotRepeated = (filePath, frontmatter) => {
+  console.log("todo");
+};
+
 const logValidatingFile = (filePath) => {
   const FgGreen = "\x1b[32m";
   const Reset = "\x1b[0m";
@@ -20,6 +24,7 @@ const logValidatingFile = (filePath) => {
   );
 };
 
+/* This would be used for checking .tilde.yaml */
 const validateSingleFile = (filePath, schema) => {
   logValidatingFile(filePath);
   validateSchema(filePath, {
@@ -70,6 +75,7 @@ const validateSingleFileFrontMatter = (filePath) => {
         f`Content type validation is not implemented for ${contentType}`
       );
   }
+  checkIdNotRepeated(filePath, frontmatter);
 };
 
 const validateDirectory = (directoryPath) => {

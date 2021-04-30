@@ -6,4 +6,8 @@ module.exports = {
   eleventyNavigation: {
     title: { type: String, required: false },
   },
+  prerequisites: {
+    hard: [{ type: String, required: false }],
+    soft: { type: Array, required: false },
+  },
 };

@@ -1,4 +1,3 @@
-const validateSchema = require("yaml-schema-validator");
 const { ALLOWED_CONTENT_TYPES } = require("../constants");
 const schema = {
   content_type: {
