@@ -1,0 +1,28 @@
+
+{% if prerequisites.soft.length or prerequisites.hard.length %}
+    <hr/>
+    <strong>Prerequisites</strong>
+
+    {% if prerequisites.hard.length %}
+        <ul>
+        {% for item in prerequisites.hard %}
+            <li>
+            {% contentLink collections, item %}
+            </li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+
+    {% if prerequisites.soft.length %}
+        <p>Optional:</p>
+        <ul>
+        {% for item in prerequisites.soft %}
+            <li>
+            {% contentLink collections, item %}
+            </li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+
+  <hr/>
+{% endif %}

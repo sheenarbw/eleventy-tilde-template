@@ -3,8 +3,7 @@ title: "Compound interest project: fun with spreadsheets"
 content_type: project
 prerequisites:
   hard:
-    - compound-interest/basics
-  soft: []
+    - content/compound-interest/basics
 submission_type: link
 ---
 

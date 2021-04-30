@@ -17,7 +17,13 @@ Built with Eleventy https://www.11ty.dev/
 
 ## Sheena
 
+- write content contribution docs
+- host (npm run deploy)
 - make it pretty o.O
-- search (do we need this?)
-- frontmatter config/linting
 - ingest into Tilde
+- frontmatter config/linting
+  - Umuzi stuff ?
+    - flavours
+    - continue from repo
+    - template repo
+- search (do we need this?)

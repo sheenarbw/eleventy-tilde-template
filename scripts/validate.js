@@ -11,8 +11,22 @@ const fm = require("front-matter");
 const { exit } = require("process");
 const { NONE, COURSE, PROJECT, TOPIC } = require("./constants");
 
+var knownDbIds = {
+  courses: {},
+  content: {},
+};
+
 const checkIdNotRepeated = (filePath, frontmatter) => {
-  console.log("todo");
+  const dbId = frontmatter._db_id;
+  if (!dbId) return;
+
+  if (frontmatter.content_type === COURSE) seen = knownDbIds.courses;
+  else seen = knownDbIds.content;
+
+  if (seen[dbId]) {
+    throw new Error(`Repeated database id!\n\t${filePath}\n\t${seen[dbId]}`);
+  }
+  seen[dbId] = filePath;
 };
 
 const logValidatingFile = (filePath) => {
@@ -81,13 +95,20 @@ const validateSingleFileFrontMatter = (filePath) => {
 const validateDirectory = (directoryPath) => {
   const validateDirectoryContents = (err, contents) => {
     contents.forEach((item) => {
+      const name = path.parse(item).name;
+
       const filePath = path.join(directoryPath, item);
       if (fs.lstatSync(filePath).isDirectory()) {
+        if (!/^[\da-z0-9\-]*$/.test(name)) {
+          // we are being stricter than technically required. But it's best to keep things tidy
+          throw new Error(
+            `invalid directory name at ${filePath}. Use lowercase letters, numbers and dashes only`
+          );
+        }
         //recurse
         validateDirectory(filePath);
       } else {
         // it's a file
-        const name = path.parse(item).name;
         if (name === "index" || name === "_index") {
           validateSingleFileFrontMatter(filePath);
         }
