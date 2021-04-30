@@ -1,5 +1,6 @@
 ---
 title: Code
+content_type: none
 ---
 
 ```

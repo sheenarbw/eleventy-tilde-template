@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "npx @11ty/eleventy --serve"
+    "serve": "npx @11ty/eleventy --serve",
+    "validate": "node scripts/validate.js"
   },
   "keywords": [],
   "author": "",
@@ -13,6 +14,10 @@
   "devDependencies": {
     "@11ty/eleventy": "^0.12.1",
     "@11ty/eleventy-img": "^0.8.3",
-    "@11ty/eleventy-navigation": "^0.1.6"
-  }
+    "@11ty/eleventy-navigation": "^0.1.6",
+    "front-matter": "^4.0.2",
+    "js-yaml": "^4.1.0",
+    "yaml-schema-validator": "^1.2.2"
+  },
+  "dependencies": {}
 }

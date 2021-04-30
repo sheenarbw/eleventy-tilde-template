@@ -1,0 +1,6 @@
+content_location:
+  type: String
+  required: True
+base_url: todo
+  type: String
+  required: True
