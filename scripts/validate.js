@@ -41,22 +41,33 @@ const logValidatingFile = (filePath) => {
 /* This would be used for checking .tilde.yaml */
 const validateSingleFile = (filePath, schema) => {
   logValidatingFile(filePath);
-  validateSchema(filePath, {
+  const errors = validateSchema(filePath, {
     schema,
   });
-  console.log();
+  if (errors.length) {
+    throw new Error(errors);
+  }
 };
 
 const validateCourseFrontmatter = (frontmatter) => {
-  validateSchema(frontmatter, { schema: courseContentSchema });
+  const errors = validateSchema(frontmatter, { schema: courseContentSchema });
+  if (errors.length) {
+    throw new Error(errors);
+  }
 };
 
 const validateProjectFrontmatter = (frontmatter) => {
-  validateSchema(frontmatter, { schema: projectContentSchema });
+  const errors = validateSchema(frontmatter, { schema: projectContentSchema });
+  if (errors.length) {
+    throw new Error(errors);
+  }
 };
 
 const validateTopicFrontmatter = (frontmatter) => {
-  validateSchema(frontmatter, { schema: topicContentSchema });
+  const errors = validateSchema(frontmatter, { schema: topicContentSchema });
+  if (errors.length) {
+    throw new Error(errors);
+  }
 };
 
 const validateSingleFileFrontMatter = (filePath) => {
@@ -70,7 +81,9 @@ const validateSingleFileFrontMatter = (filePath) => {
   let errors = validateSchema(contentTypeOnly, {
     schema: contentTypeSchema,
   });
-  if (errors.length != 0) return;
+  if (errors.length) {
+    throw new Error(errors);
+  }
   const contentType = frontmatter.content_type;
   switch (contentType) {
     case NONE:
