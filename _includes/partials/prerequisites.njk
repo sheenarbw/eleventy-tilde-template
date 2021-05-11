@@ -24,5 +24,9 @@
         </ul>
     {% endif %}
 
+    {% if from_repo %}
+        Add your code to the repo for this project: {% contentLink collections, from_repo %}
+    {% endif %}
+
   <hr/>
 {% endif %}

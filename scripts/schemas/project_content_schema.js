@@ -10,4 +10,15 @@ module.exports = {
       valueOk: (val) => ALLOWED_PROJECT_SUBMISSION_TYPES.indexOf(val) != -1,
     },
   },
+  template_repo: {
+    type: String,
+    required: false,
+    use: {
+      valueOk: (val) => val.startsWith("https://github.com"),
+    },
+  },
+  from_repo: {
+    type: String,
+    required: false,
+  },
 };

@@ -18,7 +18,6 @@ Built with Eleventy https://www.11ty.dev/
 ## Sheena
 
 - write content contribution docs
-- host (npm run deploy)
 - make it pretty o.O
 - ingest into Tilde
 - frontmatter config/linting

@@ -12,4 +12,6 @@ module.exports = {
     soft: [{ type: String, required: false }],
   },
   tags: [{ type: String, required: false }],
+  agile_weight: { type: Number, required: false },
+  flavours: [{ type: String, required: false }],
 };

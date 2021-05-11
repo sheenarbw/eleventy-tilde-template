@@ -61,6 +61,9 @@ const validateProjectFrontmatter = (frontmatter) => {
   if (errors.length) {
     throw new Error(errors);
   }
+
+  // TODO: make sure any mentioned flavours are inside .tilde.yaml
+  // TODO: make sure continue_from_repo points to a valid thing (content or url)
 };
 
 const validateTopicFrontmatter = (frontmatter) => {
