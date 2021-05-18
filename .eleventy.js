@@ -63,6 +63,10 @@ module.exports = function (eleventyConfig) {
     // return `[${page.data.title}](${page.url})`;
   });
 
+  eleventyConfig.addPairedShortcode("math", function (content) {
+    return `$/${content}/$`;
+  });
+
   eleventyConfig.addShortcode("image", imageShortcode);
   eleventyConfig.addShortcode("youtube", function (code) {
     // https://developers.google.com/youtube/player_parameters
