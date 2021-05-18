@@ -15,14 +15,7 @@ Built with Eleventy https://www.11ty.dev/
 
 # TODO
 
-## Sheena
-
 - write content contribution docs
 - make it pretty o.O
 - ingest into Tilde
-- frontmatter config/linting
-  - Umuzi stuff ?
-    - flavours
-    - continue from repo
-    - template repo
 - search (do we need this?)
