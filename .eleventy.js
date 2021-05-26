@@ -46,22 +46,25 @@ module.exports = function (eleventyConfig) {
   // });
   // eleventyConfig.addFilter("navigationToTableOfContents", navigationToTableOfContents )
 
-  eleventyConfig.addShortcode("contentLink", function (collections, link) {
-    if (link.startsWith("https://") || link.startsWith("http://")) {
-      return `<a href="${link}">${link}</a>`;
-    }
-    if (!link.endsWith("/")) link = link + "/";
-    if (!link.startsWith("/")) link = "/" + link;
-    const filtered = collections.all.filter(
-      (value) => value.data.permalink === link
-    );
-    if (filtered.length !== 1)
-      throw new Error(`No content matches permalink: "${link}"`);
+  eleventyConfig.addShortcode(
+    "contentLink",
+    function (collections, link, flavours) {
+      if (link.startsWith("https://") || link.startsWith("http://")) {
+        return `<a href="${link}">${link}</a>`;
+      }
+      if (!link.endsWith("/")) link = link + "/";
+      if (!link.startsWith("/")) link = "/" + link;
+      const filtered = collections.all.filter(
+        (value) => value.data.permalink === link
+      );
+      if (filtered.length !== 1)
+        throw new Error(`No content matches permalink: "${link}"`);
 
-    const page = filtered[0];
-    return `<a href="${page.url}">${page.data.title}</a>`;
-    // return `[${page.data.title}](${page.url})`;
-  });
+      const page = filtered[0];
+      return `<a href="${page.url}">${page.data.title}</a>`;
+      // return `[${page.data.title}](${page.url})`;
+    }
+  );
 
   eleventyConfig.addPairedShortcode("math", function (content) {
     return `$/${content}/$`;

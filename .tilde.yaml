@@ -1,5 +1,5 @@
 content_location: ./content
-base_url: todo
+base_url: https://example.com
 flavours:
   - name: any_language
     includes:

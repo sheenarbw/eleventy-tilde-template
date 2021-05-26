@@ -1,17 +1,18 @@
 ---
+_db_id: 703
+agile_weight: 3
 content_type: project
 flavours:
-  - any_language
+- any_language
 from_repo: content/foundational-projects/password-checker/part-1
 prerequisites:
   hard:
-    - content/foundational-projects/password-checker/part-1
+  - content/foundational-projects/password-checker/part-1
   soft: []
-agile_weight: 3
 submission_type: continue_repo
 tags:
-  - logging
-title: Add logging to password checker
+- logging
+title: Add logging to password strength checker
 ---
 
 In part one of this exercise you created two functions. Now you are going to upgrade that program by adding some logging capabilities.

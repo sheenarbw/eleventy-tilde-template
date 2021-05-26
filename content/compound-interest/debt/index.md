@@ -1,6 +1,7 @@
 ---
-title: Compounding debt
+_db_id: 704
 content_type: topic
+title: Compounding debt
 ---
 
 Explain how compound interest relates to debt

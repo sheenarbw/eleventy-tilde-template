@@ -1,11 +1,13 @@
 ---
-title: Financial Lit Syllabus Outline
-eleventyNavigation:
-  title: "Financial Lit Syllabus"
+_db_id: 59
 content_type: course
+eleventyNavigation:
+  title: Financial Lit Syllabus
+title: Financial Lit Syllabus Outline
 ---
 
-- {% contentLink collections "content/common-financial-goals/buying-a-house" %}
+- {% contentLink collections "content/foundational-projects/password-checker/part-1" "javascript" %}
+- {% contentLink collections "content/common-financial-goals/buying-a-house" "none" %}
 - {% contentLink collections "content/common-financial-goals/buying-a-car" %}
 
 One thing to note: Most online learning solutions resemble clever textbooks. What Tilde allows is something more like a knowld\edge graph.
