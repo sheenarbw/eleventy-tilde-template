@@ -1,11 +1,10 @@
 ---
-_db_id: 705
 content_type: project
 prerequisites:
   hard:
-  - content/compound-interest/basics
+    - content/compound-interest/basics
 submission_type: link
-title: 'Compound interest project: fun with spreadsheets'
+title: "Compound interest project: fun with spreadsheets"
 ---
 
 Use google spreadsheets to play with some numbers. Maybe give people the spreadsheet and then let them plug in numbers and play

@@ -1,18 +1,17 @@
 ---
-_db_id: 702
 agile_weight: 3
 content_type: project
 flavours:
-- any_language
+  - any_language
 prerequisites:
   hard:
-  - http://syllabus.africacode.net/projects/tdd/simple-calculator-part1/
+    - http://syllabus.africacode.net/projects/tdd/simple-calculator-part1/
   soft:
-  - http://syllabus.africacode.net/projects/django-airbnb-clone/property-owner-dashboard-ui/
+    - http://syllabus.africacode.net/projects/django-airbnb-clone/property-owner-dashboard-ui/
 submission_type: repo
 tags:
-- tdd
-- error-checking
+  - tdd
+  - error-checking
 template_repo: https://github.com/sheenarbw/eleventy-tilde-template
 title: password strength checker
 ---

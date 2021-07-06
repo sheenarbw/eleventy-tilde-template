@@ -1,5 +1,4 @@
 ---
-_db_id: 704
 content_type: topic
 title: Compounding debt
 ---

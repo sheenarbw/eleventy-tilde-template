@@ -1,17 +1,16 @@
 ---
-_db_id: 703
 agile_weight: 3
 content_type: project
 flavours:
-- any_language
+  - any_language
 from_repo: content/foundational-projects/password-checker/part-1
 prerequisites:
   hard:
-  - content/foundational-projects/password-checker/part-1
+    - content/foundational-projects/password-checker/part-1
   soft: []
 submission_type: continue_repo
 tags:
-- logging
+  - logging
 title: Add logging to password strength checker
 ---
 

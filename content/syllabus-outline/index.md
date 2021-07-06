@@ -1,5 +1,4 @@
 ---
-_db_id: 59
 content_type: course
 eleventyNavigation:
   title: Financial Lit Syllabus

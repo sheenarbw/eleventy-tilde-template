@@ -1,5 +1,4 @@
 ---
-_db_id: 706
 content_type: topic
 title: Compound interest basics
 ---
