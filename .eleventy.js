@@ -27,24 +27,23 @@ const nextNumber = () => {
   return _nextNumber;
 };
 
-// function navigationToTableOfContents(value){
-//   console.log(value)
-//   return `<pre>${JSON.stringify(value,null,2)}</pre>`
-// }
-
 module.exports = function (eleventyConfig) {
-  eleventyConfig.setTemplateFormats(["md", "css", "njk"]);
+  eleventyConfig.setTemplateFormats([
+    "md",
+    "css",
+    "njk",
+    "png",
+    "jpg",
+    "jpeg",
+    "gif",
+    "drawio.svg",
+  ]);
   // Enabled by default
   eleventyConfig.setDynamicPermalinks(false);
 
   eleventyConfig.addFilter("JSONstringify", function (value) {
     return `<pre>${JSON.stringify(value, null, 2)}</pre>`;
   });
-
-  // eleventyConfig.addFilter("prerequisitesToHtml", function (value) {
-  //   return `{{ value | JSONstringify}}`;
-  // });
-  // eleventyConfig.addFilter("navigationToTableOfContents", navigationToTableOfContents )
 
   eleventyConfig.addShortcode(
     "contentLink",
@@ -73,12 +72,12 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addShortcode("image", imageShortcode);
   eleventyConfig.addShortcode("youtube", function (code) {
     // https://developers.google.com/youtube/player_parameters
-    return `<iframe 
-                    id="ytplayer" 
-                    type="text/html" 
-                    width="640" 
+    return `<iframe
+                    id="ytplayer"
+                    type="text/html"
+                    width="640"
                     height="360"
-                    src="https://www.youtube.com/embed/${code}" 
+                    src="https://www.youtube.com/embed/${code}"
                     frameborder="0"
                     ></iframe>`;
   });

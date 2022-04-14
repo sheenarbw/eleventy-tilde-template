@@ -3,11 +3,10 @@ agile_weight: 3
 content_type: project
 flavours:
   - any_language
-from_repo: content/foundational-projects/password-checker/part-1
+from_repo: content/core-coding/password-checker/part-1
 prerequisites:
-  hard:
-    - content/foundational-projects/password-checker/part-1
-  soft: []
+  - path: content/core-coding/password-checker/part-1
+    hard: true
 submission_type: continue_repo
 tags:
   - logging

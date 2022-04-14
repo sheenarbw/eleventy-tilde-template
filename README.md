@@ -19,7 +19,8 @@ Built with Eleventy https://www.11ty.dev/
 
 # TODO
 
-- write content contribution docs
-- make it pretty o.O
-- ingest into Tilde
-- search (do we need this?)
+- figure out display of flavour overrides
+- ingest into Tilde with new flavour structure
+- allow users to switch between flavours when viewing content
+- mdx
+- syllabus/course pages

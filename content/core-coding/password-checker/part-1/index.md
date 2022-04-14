@@ -4,10 +4,11 @@ content_type: project
 flavours:
   - any_language
 prerequisites:
-  hard:
-    - http://syllabus.africacode.net/projects/tdd/simple-calculator-part1/
-  soft:
-    - http://syllabus.africacode.net/projects/django-airbnb-clone/property-owner-dashboard-ui/
+  - path: http://syllabus.africacode.net/projects/tdd/simple-calculator-part1/
+    hard: true
+  - path: http://syllabus.africacode.net/projects/django-airbnb-clone/property-owner-dashboard-ui/
+    hard: false
+
 submission_type: repo
 tags:
   - tdd

@@ -64,6 +64,7 @@ const validateProjectFrontmatter = (frontmatter) => {
 
   // TODO: make sure any mentioned flavours are inside .tilde.yaml
   // TODO: make sure continue_from_repo points to a valid thing (content or url)
+  // TODO: make sure learning_outcomes are inside learning_outcomes.yaml
 };
 
 const validateTopicFrontmatter = (frontmatter) => {
